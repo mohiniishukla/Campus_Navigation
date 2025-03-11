@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Compass - Objective</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero-image {
+      height: 500px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .hero-overlay {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      border-radius: 0 0 8px 8px;
+    }
+    .objective-card {
+      border-left: 4px solid #1e40af;
+      transition: transform 0.3s ease;
+    }
+    .objective-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <main class="container mx-auto px-4 py-12 max-w-6xl">
+    <section id="objective" class="mb-12">
+      <!-- Hero Image with Overlay -->
+      <div class="relative mb-8">
+        <img 
+          src="https://bkbck.edu.in/img/ourcollege_img02.jpg" 
+          alt="Students engaged in a group discussion in a classroom setting" 
+          class="w-full hero-image"
+        />
+        <div class="absolute inset-0 hero-overlay flex flex-col justify-end p-8 md:p-12">
+          <p class="text-gray-300 text-sm md:text-base tracking-wider uppercase mb-2">About us</p>
+          <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">Objective</h1>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="bg-white rounded-lg shadow-sm p-8 md:p-10">
+        <p class="text-gray-700 text-lg leading-relaxed mb-8">
+          The primary objective of Campus Compass, is to enhance the campus experience of B.K. Birla College for students, faculty, and visitors by providing an intuitive and accessible campus navigation system. By bridging the information gap between individuals and physical campus spaces, we've made it easier for users to locate academic buildings, administrative offices, event venues, and other essential points of interest.
+        </p>
+        
+        <h2 class="text-blue-900 font-bold text-xl md:text-2xl mb-6">Key Objectives:</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Objective Card 1 -->
+          <div class="objective-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+            <div class="flex items-center mb-4">
+              <span class="text-blue-900 text-xl font-bold mr-2">01</span>
+              <h3 class="text-gray-800 font-semibold">Efficient Navigation</h3>
+            </div>
+            <p class="text-gray-700">Provide accurate and efficient guidance to desired destinations within the campus.</p>
+          </div>
+          
+          <!-- Objective Card 2 -->
+          <div class="objective-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+            <div class="flex items-center mb-4">
+              <span class="text-blue-900 text-xl font-bold mr-2">02</span>
+              <h3 class="text-gray-800 font-semibold">Enhanced User Experience</h3>
+            </div>
+            <p class="text-gray-700">Offer a user-friendly interface with features like search functionality, and feedback mechanisms.</p>
+          </div>
+          
+          <!-- Objective Card 3 -->
+          <div class="objective-card bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md">
+            <div class="flex items-center mb-4">
+              <span class="text-blue-900 text-xl font-bold mr-2">03</span>
+              <h3 class="text-gray-800 font-semibold">Sustainability</h3>
+            </div>
+            <p class="text-gray-700">Reduce reliance on printed maps and signage, contributing to a more environmentally friendly campus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

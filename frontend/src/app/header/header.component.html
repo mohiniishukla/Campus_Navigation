@@ -1,0 +1,43 @@
+<header class="campus-header">
+  <div class="campus-header-container">
+    <div class="campus-logo">
+      <!--<img src="/assets/IMG_20250228_185818.jpg" alt="College Logo"> -->
+      <div class="campus-logo-text">
+        <h1 [routerLink]="''">CAMPUS COMPASS</h1>
+        <span class="college-name">{{collegeName}}</span>
+      </div>
+    </div>
+    <nav class="campus-nav">
+      <div class="dropdown-wrapper">
+        <a  class="campus-nav-link">
+          About Us
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="inline-block ml-1 h-4 w-4" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        
+        <div class="dropdown-content">
+          <a class="dropdown-item" routerLink="/aboutus/ourcollege">
+            Our College
+          </a>
+          
+          <a class="dropdown-item" routerLink="/aboutus/objective">
+            Objective 
+          </a>
+        </div>
+      </div> 
+    
+      <a [routerLink]="'usermanual'" class="campus-nav-link">User Manual</a>
+    </nav>
+  </div>
+</header> 
+
+
+
+

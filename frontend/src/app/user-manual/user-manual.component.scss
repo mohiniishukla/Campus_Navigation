@@ -1,0 +1,167 @@
+
+/* User Manual Styling */
+.user-manual-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+.manual-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding: 40px 0;
+  background: linear-gradient(to right, #e8f4fc, #d0e8f5);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.manual-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.manual-header .subtitle {
+  font-size: 1.2rem;
+  color: #3498db;
+  font-weight: 500;
+}
+
+/* Introduction Text */
+.manual-intro {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 10%;
+}
+
+/* Instructions Container */
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Section Styling */
+.instruction-section {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instruction-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.section-content {
+  padding: 15px 20px 20px 65px;
+  background-color: white;
+}
+
+.section-content ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.section-content li {
+  position: relative;
+  padding: 8px 0 8px 20px;
+}
+
+.section-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 6px;
+  height: 6px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+/* Support Section */
+.support-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.support-section h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .manual-header {
+    padding: 30px 15px;
+  }
+  
+  .manual-header h1 {
+    font-size: 2rem;
+  }
+  
+  .section-content {
+    padding: 15px 15px 20px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manual-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .manual-header .subtitle {
+    font-size: 1rem;
+  }
+  
+  .manual-intro {
+    padding: 0 5%;
+  }
+  
+  .section-content {
+    padding: 15px 15px 20px 40px;
+  }
+}
