@@ -1,0 +1,63 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:host {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  width: 100%;
+}
+
+/* Make section full width */
+section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero image styles - full screen width */
+.hero-image {
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0; /* Remove border radius for full-width effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  border-radius: 0; /* Remove border radius for full-width effect */
+}
+
+/* Content container responsive padding */
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Objective card styles */
+.objective-card {
+  border-left: 4px solid #1e40af;
+  transition: transform 0.3s ease;
+}
+
+.objective-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 400px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    height: 300px;
+  }
+}

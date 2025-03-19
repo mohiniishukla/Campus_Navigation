@@ -1,0 +1,43 @@
+/* Font import for Poppins - you can add this to your global styles or component */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:host {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section Styles */
+.hero-image {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  border-radius: 0 0 8px 8px;
+}
+
+/* Content Styles */
+.content-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.highlight {
+  background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
+  height: 4px;
+  width: 60px;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+
+/* Statistics Cards */
+.stat-card {
+  border-left: 3px solid #1e40af;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}

@@ -1,0 +1,132 @@
+// Tip Container Styles
+.tip-container {
+    margin-top: 1rem;
+    background-color: #ebf5ff; // bg-blue-50
+    padding: 0.35rem;
+    border-radius: 0.25rem;
+    border: 1px solid #dbeafe; // border-blue-100
+    font-size: 0.875rem;
+    color: #1e40af; // text-blue-800
+    margin-bottom: 1rem;
+  }
+  
+  // Feature Card Styles
+  .grid {
+    display: grid;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  @media (min-width: 768px) {
+    .md\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  
+  .gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  // Card styles
+  .bg-white {
+    background-color: #fff;
+  }
+  
+  .p-6 {
+    padding: 1.5rem;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  
+  // Icon styles
+  .text-blue-500 {
+    color: #3b82f6;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  // Text styles
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .text-gray-800 {
+    color: #1f2937;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-gray-600 {
+    color: #4b5563;
+  }
+  
+  // Footer styles
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  
+  .from-cyan-500 {
+    --tw-gradient-from: #06b6d4;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(6, 182, 212, 0));
+  }
+  
+  .to-blue-600 {
+    --tw-gradient-to: #2563eb;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  // Other utility classes
+  .flex {
+    display: flex;
+  }
+  
+  .items-start {
+    align-items: flex-start;
+  }
+  
+  .mt-1 {
+    margin-top: 0.25rem;
+  }
+  
+  .mr-2 {
+    margin-right: 0.5rem;
+  }

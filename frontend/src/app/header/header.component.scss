@@ -1,0 +1,509 @@
+
+   /* Root variables for consistent styling */
+   :root {
+    --primary-color: #1d4ed8;
+    --secondary-color: #0ea5e9;
+    --accent-color: #f8b400;
+    --text-color: #333333;
+    --light-text: #ffffff;
+    --background-light: #f8f9fa;
+    --transition-speed: 0.3s ease;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Header Styles */
+  .campus-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+  }
+  
+  /* Top Header with Logo and Title */
+  .header-top {
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+    }
+    
+    .logo-container {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Logo styles */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-pulse {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+    animation: pulse 2s infinite;
+  }
+
+  .nav-content-md{
+    padding: 1% 2% !important;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(14, 165, 233, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+    }
+  }
+  
+  .logo-image {
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  .title-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .campus-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #0ea5e9, #1d4ed8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0;
+  }
+  
+  .college-name {
+    font-size: 0.875rem;
+    color: #4B5563;
+    font-weight: 500;
+    // margin: 0.25rem 0 0 0;
+  }
+  
+  .university-name {
+    font-size: 0.75rem;
+    color: #6B7280;
+    // margin: 0.125rem 0 0 0;
+  }
+  
+  .action-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .button-icon {
+    margin-right: 0.5rem;
+  }
+  .dropdown-wrapper {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 20%; /* Position at 50% of the parent */
+    transform: translateX(-50%); /* Shift back by 50% of its own width */
+    min-width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) translateX(-50%); /* Combine both transforms */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 100;
+    padding: 1rem;
+    margin-top: 0.75rem;
+  }
+  
+  .dropdown-wrapper:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateX(-50%);
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+    color: var(--secondary-color);
+  }
+  
+  .dropdown-item .item-description {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 0.25rem;
+  }
+  
+  /* Navigation styles */
+  .nav-container {
+    background-image: linear-gradient(to right, #0ea5e9, #1d4ed8);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link:hover {
+    color: #BFDBFE;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: width var(--transition-speed);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .link-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    color: white;
+    transition: all var(--transition-speed);
+  }
+  
+  .social-link:hover {
+    color: #BFDBFE;
+  }
+  
+  /* Mobile menu button */
+  .menu-button {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .collapse{
+    visibility: visible;
+  }
+
+  .navbar-nav{
+    margin-inline-start: inherit !important;
+  }
+
+  @media (max-width: 768px) {
+    .social-links {
+      display: none;
+    }
+    
+    .menu-button {
+      display: block;
+    }
+    
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--primary-color);
+      flex-direction: column;
+      padding: 5rem 2rem;
+      transition: left var(--transition-speed);
+      z-index: 100;
+      align-items: flex-start; /* Align items to left in mobile view */
+    }
+    
+    .nav-links.active {
+      left: 0;
+    }
+    
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      min-width: unset;
+      transform: none;
+      background-color: transparent;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      margin-top: 0.5rem;
+      opacity: 1;
+      visibility: visible;
+      display: none;
+    }
+    
+    .dropdown-wrapper:hover .dropdown-content {
+      transform: none;
+      display: block;
+    }
+    
+    .dropdown-item {
+      color: white;
+      padding: 0.5rem 0;
+    }
+    
+    .dropdown-item:hover {
+      background-color: transparent;
+      color: var(--accent-color);
+    }
+  
+  
+    .collapse{
+      visibility: visible;
+    }
+  
+    .nav-content-md{
+      padding: 3% 2% !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .campus-title {
+      font-size: 1.5rem;
+    }
+    
+    .college-name {
+      font-size: 0.75rem;
+    }
+    
+    .university-name {
+      font-size: 0.7rem;
+    }
+    
+    .logo-image {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+     
+  /* Base header styles 
+  .campus-header {
+    background: linear-gradient( #00BFFF, #007fff);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: '48px Poppins', sans-serif;
+  }
+  
+  .campus-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo styles 
+  .campus-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .campus-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+  }
+  
+  .campus-logo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  .campus-logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .campus-logo-text h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: color 0.2s ease;
+  }
+  
+  .campus-logo-text h1:hover {
+    color: #fdbb2d;
+  }
+  
+  .college-name {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Navigation styles 
+  .campus-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .campus-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .campus-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fdbb2d;
+  }
+  
+  /* Dropdown styles 
+  .dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 101;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .dropdown-wrapper:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .dropdown-item {
+    color: #333;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f5f5f5;
+    color: #b21f1f;
+  }
+  
+  /* Animation 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles 
+  @media (max-width: 768px) {
+    .campus-header-container {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+    }
+    
+    .campus-nav {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .campus-logo-text h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Add font import in the HTML head section 
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');*/

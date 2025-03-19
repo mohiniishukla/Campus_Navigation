@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --background-color: #f4f6f7;
+    --transition-speed: 0.3s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all var(--transition-speed) ease-in-out;
+  }
+  
+  body {
+    //font-family: 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+
+  ::ng-deep .chatling-open-chat-icon div{
+    background-color: rgb(88 134 208) !important;
+  }

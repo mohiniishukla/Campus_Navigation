@@ -1,0 +1,8 @@
+<app-header></app-header>
+ <router-outlet></router-outlet>
+ <app-footer></app-footer> 
+ <p *ngIf="!environment.production">Development Environment</p>
+<p *ngIf="environment.production">Production Environment</p>
+<p>API URL: {{environment.apiUrl}}</p>
+
+<!-- Rest of your existing template content -->
