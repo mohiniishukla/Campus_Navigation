@@ -13,7 +13,10 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
       envFilePath: process.env.NODE_ENV === 'production' ? '.env.production' : '.env',
     }),
-    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/navigation'), 
+    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/navigation', {
+      retryAttempts: 3,
+      retryDelay: 1000,
+    }),
     NavigatorModule,
     CollegeInfoModule,
     EventModule
