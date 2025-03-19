@@ -9,16 +9,19 @@ import 'dotenv/config';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
+  // Add global prefix 'api' to all routes
+  app.setGlobalPrefix('api');
+  
   // Swagger setup
   const config = new DocumentBuilder()
     .setTitle('Mappedin API')
     .setDescription('Api Docs')
     .setVersion('1.0')
     .build();
-  
+    
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);
-  
+    
   // Logger and interceptor setup
   app.useGlobalInterceptors(
     new HttpInterceptorInterceptor(
@@ -38,11 +41,12 @@ async function bootstrap() {
       })
     )
   );
-  
+    
   // Enable CORS for frontend requests
   app.enableCors();
-  
+    
   // Use PORT from environment variables for Vercel, fallback to 3000
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
+
